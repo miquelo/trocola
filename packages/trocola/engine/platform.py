@@ -26,9 +26,11 @@ class Platform:
 	
 	:param string mgr_class_name:
 	   Its manager class name.
+	:param Resource data_res:
+	   Data resource.
 	"""
 	
-	def __init__(mgr_class_name, state=None):
+	def __init__(mgr_class_name, data_res):
 	
-		
+		pass
 

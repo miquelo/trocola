@@ -75,8 +75,8 @@ class Engine:
 	"""
 	The engine of the management tool.
 	
-	:param dict state:
-	   State of the engine.
+	:param Resource state_res:
+	   State resource of the engine.
 	:param EngineEventQueue event_queue:
 	   Event queue used for dispatching engine task events.
 	:param out:
@@ -89,14 +89,14 @@ class Engine:
 	
 	def __init__(
 		self,
-		state=None,
+		state_res,
 		event_queue=NoneEngineEventQueue(),
 		out=NoneOutput(),
 		err=NoneOutput(),
 		max_workers=10
 	):
 	
-		self.__state = state or {}
+		self.__state_res = state_res
 		self.__event_queue = event_queue
 		self.__out = out
 		self.__err = err

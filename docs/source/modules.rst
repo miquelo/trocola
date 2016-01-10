@@ -31,4 +31,5 @@ Contents:
    modules.engine
    modules.engine.image
    modules.engine.layout
+   modules.engine.platform
 

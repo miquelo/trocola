@@ -15,6 +15,10 @@
 # along with TROCOLA.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+"""
+Module for image definition.
+"""
+
 # from trocola.module import resolver
 # from trocola.module import resource
 # from trocola.module import util

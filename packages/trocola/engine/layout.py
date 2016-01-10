@@ -15,6 +15,10 @@
 # along with TROCOLA.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+"""
+Module for layout definition.
+"""
+
 from trocola.engine import image
 
 # from trocola.module import resolver

@@ -15,6 +15,11 @@
 # along with TROCOLA.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+"""
+Read an write JSON data from and to string input and output, as well it does the
+standard :mod:`json` module, but in streaming mode.
+"""
+
 import io
 
 class ReaderException(BaseException):

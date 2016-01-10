@@ -15,3 +15,7 @@
 # along with TROCOLA.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+"""
+Package with engine classes.
+"""
+

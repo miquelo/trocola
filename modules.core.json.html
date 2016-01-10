@@ -1,0 +1,1163 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trocola.core.json &mdash; TROCOLA 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="TROCOLA 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="Modules" href="modules.html"/>
+        <link rel="next" title="trocola.engine" href="modules.engine.html"/>
+        <link rel="prev" title="Modules" href="modules.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TROCOLA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#core-package">Core package</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">trocola.core.json</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#engine-package">Engine package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">TROCOLA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+      
+    <li>trocola.core.json</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/modules.core.json.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="trocola-core-json">
+<h1>trocola.core.json<a class="headerlink" href="#trocola-core-json" title="Permalink to this headline">¶</a></h1>
+<p>Read an write JSON data from and to string input and output, as well it does the
+standard <a class="reference external" href="https://docs.python.org/3/library/json.html#module-json" title="(in Python v3.5)"><code class="xref py py-mod docutils literal"><span class="pre">json</span></code></a> module, but in streaming mode.</p>
+<span class="target" id="module-trocola.core.json"></span><dl class="exception">
+<dt id="trocola.core.json.ReaderException">
+<em class="property">exception </em><code class="descclassname">trocola.core.json.</code><code class="descname">ReaderException</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ReaderException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">BaseException</span></code></a></p>
+<p>Reader exception.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> &#8211; Exception arguments.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.Reader">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">Reader</code><span class="sig-paren">(</span><em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Reader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Abstract reader for JSON source.</p>
+<p>It can be iterated in order to fetch its child <a class="reference internal" href="#trocola.core.json.Reader" title="trocola.core.json.Reader"><code class="xref py py-class docutils literal"><span class="pre">Reader</span></code></a> items.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> &#8211; JSON source.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.Reader.isnumber">
+<code class="descname">isnumber</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Reader.isnumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if it is a number reader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if it is a number reader. False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.Reader.isstr">
+<code class="descname">isstr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Reader.isstr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if it is an string reader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if it is an string reader. False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.Reader.islist">
+<code class="descname">islist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Reader.islist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if it is a list reader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if it is a list reader. False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.Reader.isdict">
+<code class="descname">isdict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Reader.isdict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if it is a dictionary reader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if it is a dictionary reader. False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.Reader.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Reader.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read next <em>count</em> characters from source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Number of characters to be read.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)">string</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">String containing read characters.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.NumberReader">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">NumberReader</code><span class="sig-paren">(</span><em>src</em>, <em>first_c</em>, <em>concluded_fn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.NumberReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#trocola.core.json.Reader" title="trocola.core.json.Reader"><code class="xref py py-class docutils literal"><span class="pre">trocola.core.json.Reader</span></code></a></p>
+<p>Reader for JSON numbers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> &#8211; JSON source.</li>
+<li><strong>first_c</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; First character.</li>
+<li><strong>concluded_fn</strong> &#8211; Function called when number reading has been concluded.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.NumberReader.isnumber">
+<code class="descname">isnumber</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.NumberReader.isnumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if it is a number reader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True because it is a number reader.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.NumberReader.value">
+<code class="descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.NumberReader.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.NumberReader.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.NumberReader.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read next <em>count</em> characters from source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Number of characters to be read.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)">string</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">String containing read characters.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.NumberReader.next">
+<code class="descname">next</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.NumberReader.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield next item, if any, after reading the given character.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>c</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Read character.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yield:</th><td class="field-body">Next item, if any.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.StringReader">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">StringReader</code><span class="sig-paren">(</span><em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.StringReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#trocola.core.json.Reader" title="trocola.core.json.Reader"><code class="xref py py-class docutils literal"><span class="pre">trocola.core.json.Reader</span></code></a></p>
+<p>Reader for JSON strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> &#8211; JSON source.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.StringReader.isstr">
+<code class="descname">isstr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.StringReader.isstr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if it is an string reader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True because it is an string reader.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.StringReader.value">
+<code class="descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.StringReader.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>String value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)">string</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The string value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.StringReader.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.StringReader.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read next <em>count</em> characters from source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Number of characters to be read.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)">string</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">String containing read characters.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.StringReader.next">
+<code class="descname">next</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.StringReader.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield next item, if any, after reading the given character.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>c</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Read character.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yield:</th><td class="field-body">Next item, if any.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.ListReader">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">ListReader</code><span class="sig-paren">(</span><em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#trocola.core.json.Reader" title="trocola.core.json.Reader"><code class="xref py py-class docutils literal"><span class="pre">trocola.core.json.Reader</span></code></a></p>
+<p>Reader for JSON lists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> &#8211; JSON source.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.ListReader.islist">
+<code class="descname">islist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListReader.islist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if it is a list reader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True because it is a list reader.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.ListReader.value">
+<code class="descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListReader.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>List value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.5)">list</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.ListReader.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListReader.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read next <em>count</em> characters from source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Number of characters to be read.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)">string</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">String containing read characters.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.ListReader.next">
+<code class="descname">next</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListReader.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield next item, if any, after reading the given character.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>c</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Read character.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yield:</th><td class="field-body">Next item, if any.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.DictionaryReader">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">DictionaryReader</code><span class="sig-paren">(</span><em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#trocola.core.json.Reader" title="trocola.core.json.Reader"><code class="xref py py-class docutils literal"><span class="pre">trocola.core.json.Reader</span></code></a></p>
+<p>Reader for JSON dictionaries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> &#8211; JSON source.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.DictionaryReader.isdict">
+<code class="descname">isdict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryReader.isdict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if it is a dictionary reader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True because it is a dictionary reader.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.DictionaryReader.value">
+<code class="descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryReader.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The dictionary value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.DictionaryReader.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryReader.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read next <em>count</em> characters from source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Number of characters to be read.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)">string</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">String containing read characters.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.DictionaryReader.next">
+<code class="descname">next</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryReader.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield next item, if any, after reading the given character.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>c</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Read character.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yield:</th><td class="field-body">Next item, if any.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="trocola.core.json.WriterException">
+<em class="property">exception </em><code class="descclassname">trocola.core.json.</code><code class="descname">WriterException</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.WriterException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">BaseException</span></code></a></p>
+<p>Writer exception.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> &#8211; Exception arguments.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.Writer">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">Writer</code><span class="sig-paren">(</span><em>tgt</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Writer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Abstract writer for JSON target.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tgt</strong> &#8211; JSON target.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.Writer.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Writer.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write text to target.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> &#8211; Text to be written.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Number of written characters.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises WriterExeption:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">If writer is already closed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.Writer.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.Writer.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close this writer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises WriterExeption:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If writer is already closed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.NumberWriter">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">NumberWriter</code><span class="sig-paren">(</span><em>tgt</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.NumberWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#trocola.core.json.Writer" title="trocola.core.json.Writer"><code class="xref py py-class docutils literal"><span class="pre">trocola.core.json.Writer</span></code></a></p>
+<p>Writer for JSON numbers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tgt</strong> &#8211; JSON target.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.NumberWriter.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.NumberWriter.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close this writer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises WriterExeption:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If writer is already closed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.StringWriter">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">StringWriter</code><span class="sig-paren">(</span><em>tgt</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.StringWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#trocola.core.json.Writer" title="trocola.core.json.Writer"><code class="xref py py-class docutils literal"><span class="pre">trocola.core.json.Writer</span></code></a></p>
+<p>Writer for JSON strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tgt</strong> &#8211; JSON target.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.StringWriter.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.StringWriter.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close this writer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises WriterExeption:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If writer is already closed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.ListWriter">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">ListWriter</code><span class="sig-paren">(</span><em>tgt</em>, <em>depth=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#trocola.core.json.Writer" title="trocola.core.json.Writer"><code class="xref py py-class docutils literal"><span class="pre">trocola.core.json.Writer</span></code></a></p>
+<p>Writer for JSON lists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tgt</strong> &#8211; JSON target.</li>
+<li><strong>depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Depth for pretty print.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.ListWriter.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListWriter.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append a value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> &#8211; Value to be appended.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises WriterException:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">If value type is not supported.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.ListWriter.append_number">
+<code class="descname">append_number</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListWriter.append_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append a number.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.NumberWriter" title="trocola.core.json.NumberWriter">NumberWriter</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The appended number writer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.ListWriter.append_str">
+<code class="descname">append_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListWriter.append_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append an string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.StringWriter" title="trocola.core.json.StringWriter">StringWriter</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The appended string writer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.ListWriter.append_list">
+<code class="descname">append_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListWriter.append_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append a list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.ListWriter" title="trocola.core.json.ListWriter">ListWriter</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The appended list writer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.ListWriter.append_dict">
+<code class="descname">append_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListWriter.append_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.DictionaryWriter" title="trocola.core.json.DictionaryWriter">DictionaryWriter</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The appended dictionary writer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.ListWriter.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.ListWriter.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close this writer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises WriterExeption:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If writer is already closed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.core.json.DictionaryWriter">
+<em class="property">class </em><code class="descclassname">trocola.core.json.</code><code class="descname">DictionaryWriter</code><span class="sig-paren">(</span><em>tgt</em>, <em>depth=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#trocola.core.json.Writer" title="trocola.core.json.Writer"><code class="xref py py-class docutils literal"><span class="pre">trocola.core.json.Writer</span></code></a></p>
+<p>Writer for JSON dictionaries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tgt</strong> &#8211; JSON target.</li>
+<li><strong>depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Depth for pretty print.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trocola.core.json.DictionaryWriter.put">
+<code class="descname">put</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryWriter.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put a value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Key of the value to be put.</li>
+<li><strong>value</strong> &#8211; Value to be put.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises WriterException:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first last">If value type is not supported.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.DictionaryWriter.put_number">
+<code class="descname">put_number</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryWriter.put_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put a number.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Key of the value to be put.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.NumberWriter" title="trocola.core.json.NumberWriter">NumberWriter</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The put number writer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.DictionaryWriter.put_str">
+<code class="descname">put_str</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryWriter.put_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put an string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Key of the value to be put.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.StringWriter" title="trocola.core.json.StringWriter">StringWriter</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The put string writer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.DictionaryWriter.put_list">
+<code class="descname">put_list</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryWriter.put_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put a list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Key of the value to be put.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.ListWriter" title="trocola.core.json.ListWriter">ListWriter</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The put list writer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.DictionaryWriter.put_dict">
+<code class="descname">put_dict</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryWriter.put_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Key of the value to be put.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.DictionaryWriter" title="trocola.core.json.DictionaryWriter">DictionaryWriter</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The put dictionary writer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trocola.core.json.DictionaryWriter.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.DictionaryWriter.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close this writer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises WriterExeption:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If writer is already closed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trocola.core.json.read">
+<code class="descclassname">trocola.core.json.</code><code class="descname">read</code><span class="sig-paren">(</span><em>str_in</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read from JSON source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>str_in</strong> &#8211; JSON string input.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#trocola.core.json.Reader" title="trocola.core.json.Reader">Reader</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON reader.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises ReaderException:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">If some error has been ocurred at reading.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trocola.core.json.write">
+<code class="descclassname">trocola.core.json.</code><code class="descname">write</code><span class="sig-paren">(</span><em>str_out</em>, <em>value</em>, <em>depth=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>str_out</strong> &#8211; JSON string output.</li>
+<li><strong>value</strong> &#8211; Value to be written.</li>
+<li><strong>depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Depth for pretty print.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises WriterException:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first last">If value type is not supported.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trocola.core.json.write_number">
+<code class="descclassname">trocola.core.json.</code><code class="descname">write_number</code><span class="sig-paren">(</span><em>str_out</em>, <em>depth=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.write_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a number.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>str_out</strong> &#8211; JSON string output.</li>
+<li><strong>depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Depth for pretty print.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#trocola.core.json.NumberWriter" title="trocola.core.json.NumberWriter">NumberWriter</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The written number writer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trocola.core.json.write_str">
+<code class="descclassname">trocola.core.json.</code><code class="descname">write_str</code><span class="sig-paren">(</span><em>str_out</em>, <em>depth=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.write_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write an string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>str_out</strong> &#8211; JSON string output.</li>
+<li><strong>depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Depth for pretty print.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#trocola.core.json.StringWriter" title="trocola.core.json.StringWriter">StringWriter</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The written string writer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trocola.core.json.write_list">
+<code class="descclassname">trocola.core.json.</code><code class="descname">write_list</code><span class="sig-paren">(</span><em>str_out</em>, <em>depth=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.write_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>str_out</strong> &#8211; JSON string output.</li>
+<li><strong>depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Depth for pretty print.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#trocola.core.json.ListWriter" title="trocola.core.json.ListWriter">ListWriter</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The written list writer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trocola.core.json.write_dict">
+<code class="descclassname">trocola.core.json.</code><code class="descname">write_dict</code><span class="sig-paren">(</span><em>str_out</em>, <em>depth=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.core.json.write_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>str_out</strong> &#8211; JSON string output.</li>
+<li><strong>depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Depth for pretty print.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#trocola.core.json.DictionaryWriter" title="trocola.core.json.DictionaryWriter">DictionaryWriter</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The written dictionary writer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.engine.html" class="btn btn-neutral float-right" title="trocola.engine" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral" title="Modules" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Miquel A. Ferran.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

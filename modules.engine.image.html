@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trocola.engine.image &mdash; TROCOLA 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="TROCOLA 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="Modules" href="modules.html"/>
+        <link rel="next" title="trocola.engine.layout" href="modules.engine.layout.html"/>
+        <link rel="prev" title="trocola.engine" href="modules.engine.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TROCOLA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="modules.html#core-package">Core package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#engine-package">Engine package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="modules.engine.html">trocola.engine</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">trocola.engine.image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.engine.layout.html">trocola.engine.layout</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">TROCOLA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+      
+    <li>trocola.engine.image</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/modules.engine.image.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="trocola-engine-image">
+<h1>trocola.engine.image<a class="headerlink" href="#trocola-engine-image" title="Permalink to this headline">¶</a></h1>
+<p>Module for image definition.</p>
+<span class="target" id="module-trocola.engine.image"></span><dl class="class">
+<dt id="trocola.engine.image.Image">
+<em class="property">class </em><code class="descclassname">trocola.engine.image.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>ref</em>, <em>extends=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.engine.image.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Container image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ref</strong> (<a class="reference internal" href="#trocola.engine.image.ImageRef" title="trocola.engine.image.ImageRef"><em>ImageRef</em></a>) &#8211; Image reference.</li>
+<li><strong>extends</strong> (<a class="reference internal" href="#trocola.engine.image.ImageRef" title="trocola.engine.image.ImageRef"><em>ImageRef</em></a>) &#8211; Extended image reference, if any.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="trocola.engine.image.Image.ref">
+<code class="descname">ref</code><a class="headerlink" href="#trocola.engine.image.Image.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image reference of type <a class="reference internal" href="#trocola.engine.image.ImageRef" title="trocola.engine.image.ImageRef"><code class="xref py py-class docutils literal"><span class="pre">ImageRef</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.Image.extends">
+<code class="descname">extends</code><a class="headerlink" href="#trocola.engine.image.Image.extends" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extended image reference of type <a class="reference internal" href="#trocola.engine.image.ImageRef" title="trocola.engine.image.ImageRef"><code class="xref py py-class docutils literal"><span class="pre">ImageRef</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.Image.ports">
+<code class="descname">ports</code><a class="headerlink" href="#trocola.engine.image.Image.ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of <a class="reference internal" href="#trocola.engine.image.ImagePort" title="trocola.engine.image.ImagePort"><code class="xref py py-class docutils literal"><span class="pre">ImagePort</span></code></a> values to be exposed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.Image.resources">
+<code class="descname">resources</code><a class="headerlink" href="#trocola.engine.image.Image.resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of <a class="reference internal" href="#trocola.engine.image.ImageResource" title="trocola.engine.image.ImageResource"><code class="xref py py-class docutils literal"><span class="pre">ImageResource</span></code></a> values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.Image.provision">
+<code class="descname">provision</code><a class="headerlink" href="#trocola.engine.image.Image.provision" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of <a class="reference internal" href="#trocola.engine.image.ImageCommand" title="trocola.engine.image.ImageCommand"><code class="xref py py-class docutils literal"><span class="pre">ImageCommand</span></code></a> values for provisioning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.Image.execution">
+<code class="descname">execution</code><a class="headerlink" href="#trocola.engine.image.Image.execution" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of <a class="reference internal" href="#trocola.engine.image.ImageCommand" title="trocola.engine.image.ImageCommand"><code class="xref py py-class docutils literal"><span class="pre">ImageCommand</span></code></a> values for execution.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.engine.image.ImageRef">
+<em class="property">class </em><code class="descclassname">trocola.engine.image.</code><code class="descname">ImageRef</code><span class="sig-paren">(</span><em>name</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.engine.image.ImageRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Container image reference.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Image name.</li>
+<li><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Image version.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="trocola.engine.image.ImageRef.name">
+<code class="descname">name</code><a class="headerlink" href="#trocola.engine.image.ImageRef.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.ImageRef.version">
+<code class="descname">version</code><a class="headerlink" href="#trocola.engine.image.ImageRef.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image version.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.engine.image.ImagePort">
+<em class="property">class </em><code class="descclassname">trocola.engine.image.</code><code class="descname">ImagePort</code><span class="sig-paren">(</span><em>name</em>, <em>value</em>, <em>proto='tcp'</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.engine.image.ImagePort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Port exposed by an image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Port name.</li>
+<li><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Port value.</li>
+<li><strong>proto</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Tranport protocol.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="trocola.engine.image.ImagePort.name">
+<code class="descname">name</code><a class="headerlink" href="#trocola.engine.image.ImagePort.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.ImagePort.value">
+<code class="descname">value</code><a class="headerlink" href="#trocola.engine.image.ImagePort.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.ImagePort.protocol">
+<code class="descname">protocol</code><a class="headerlink" href="#trocola.engine.image.ImagePort.protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transport protocol.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.engine.image.ImageResource">
+<em class="property">class </em><code class="descclassname">trocola.engine.image.</code><code class="descname">ImageResource</code><span class="sig-paren">(</span><em>source_res</em>, <em>target_path</em>, <em>props=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.engine.image.ImageResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Container image resource with the given source resource, target path and
+properties.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>source_res</strong> (<em>Resource</em>) &#8211; Source resource.</li>
+<li><strong>target_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.5)"><em>string</em></a>) &#8211; Target path.</li>
+<li><strong>props</strong> &#8211; Optional properties.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="trocola.engine.image.ImageResource.source_res">
+<code class="descname">source_res</code><a class="headerlink" href="#trocola.engine.image.ImageResource.source_res" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.ImageResource.target_path">
+<code class="descname">target_path</code><a class="headerlink" href="#trocola.engine.image.ImageResource.target_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trocola.engine.image.ImageResource.properties">
+<code class="descname">properties</code><a class="headerlink" href="#trocola.engine.image.ImageResource.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional properties.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trocola.engine.image.ImageCommand">
+<em class="property">class </em><code class="descclassname">trocola.engine.image.</code><code class="descname">ImageCommand</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.engine.image.ImageCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Container image command with the given resources.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) &#8211; Command arguments.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="trocola.engine.image.ImageCommand.arguments">
+<code class="descname">arguments</code><a class="headerlink" href="#trocola.engine.image.ImageCommand.arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command arguments.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trocola.engine.image.load">
+<code class="descclassname">trocola.engine.image.</code><code class="descname">load</code><span class="sig-paren">(</span><em>base_res</em>, <em>image_data</em>, <em>props=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trocola.engine.image.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a container image from the given data dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>base_res</strong> (<em>Resource</em>) &#8211; Base resource.</li>
+<li><strong>image_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) &#8211; Dictionary with image data.</li>
+<li><strong>props</strong> &#8211; Optional properties.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#trocola.engine.image.Image" title="trocola.engine.image.Image">Image</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The loaded image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>An example:</p>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;members-service&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;extends&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;rest-service&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">80</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;provision&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;execution&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Data dictionary will be treated as a resolvable one.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.engine.layout.html" class="btn btn-neutral float-right" title="trocola.engine.layout" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.engine.html" class="btn btn-neutral" title="trocola.engine" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Miquel A. Ferran.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

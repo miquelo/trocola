@@ -1,0 +1,13 @@
+{
+	"name": "complex",
+	"complexity": 1,
+	"items": [
+		"item1",
+		"item2",
+		"item3"
+	],
+	"properties": {
+		"type": "stream",
+		"depth": 2
+	}
+}

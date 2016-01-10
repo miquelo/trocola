@@ -137,10 +137,10 @@ class ImagePort:
 	:param int value:
 	   Port value.
 	:param string proto:
-	   Tranport protocol. By default it is "tcp".
+	   Tranport protocol.
 	"""
 	
-	def __init__(self, name, value, proto=None):
+	def __init__(self, name, value, proto="tcp"):
 	
 		self.__name = name
 		self.__value = value

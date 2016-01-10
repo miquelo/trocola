@@ -107,7 +107,7 @@ class Reader:
 	def read(self, count):
 	
 		"""
-		Read next `count` characters from source.
+		Read next *count* characters from source.
 		
 		:param int count:
 		   Number of characters to be read.
@@ -221,7 +221,7 @@ class NumberReader(Reader):
 	def read(self, count):
 	
 		"""
-		Read next `count` characters from source.
+		Read next *count* characters from source.
 		
 		:param int count:
 		   Number of characters to be read.
@@ -317,7 +317,7 @@ class StringReader(Reader):
 	def read(self, count):
 	
 		"""
-		Read next `count` characters from source.
+		Read next *count* characters from source.
 		
 		:param int count:
 		   Number of characters to be read.
@@ -438,7 +438,7 @@ class ListReader(Reader):
 	def read(self, count):
 	
 		"""
-		Read next `count` characters from source.
+		Read next *count* characters from source.
 		
 		:param int count:
 		   Number of characters to be read.
@@ -601,7 +601,7 @@ class DictionaryReader(Reader):
 	def read(self, count):
 	
 		"""
-		Read next `count` characters from source.
+		Read next *count* characters from source.
 		
 		:param int count:
 		   Number of characters to be read.
